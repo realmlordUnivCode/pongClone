@@ -24,7 +24,30 @@
     botPaddleX = 10
     botPaddleY = 500
     paddleWidth = 50
-  
+  function ballMove(){
+  switch(ballDirection)
+    //0 means down and right!
+    case 0:
+    ballX += 10
+    ballY += 10
+    break;
+    //1 means down and left
+    case 1:
+    ballX -=10 
+    ballY+=10
+    break;
+    //2 means up and to the right
+    case 2:
+    ballX += 10
+    ballY -= 10
+    break;
+    //3 means up and to the left
+    care 3:
+    ballX-=10
+    ballY-=10
+    
+    
+  }
 function setup(){
  createCanvas(window.innerwidth,window.innerHeight 
   framerate(15)
@@ -78,7 +101,7 @@ function botDirChange(){
                 paddleY = mouseY
                 rect(width-10,paddleY,10,paddleWidth)
    
-   
+  ballMove() 
  }
 
   </script>
