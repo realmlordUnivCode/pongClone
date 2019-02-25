@@ -10,8 +10,21 @@
         }
     </style>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
-
+<script>
+  function thisworks(){
+    
+   alert("this Works") 
+  }
+  
+  
+  </script>
+      
   <script>
+    thisworks()
+    botPaddleX = 10
+    botPaddleY = 500
+    paddleWidth = 50
+  
 function setup(){
  createCanvas(window.innerwidth,window.innerHeight 
   framerate(15)
@@ -21,14 +34,49 @@ var scoreBot = 0
 var scored = false
 var ballX = 500
 var ballY = 500
+var botDirection = "up"
+function botMove(){
+if (botDirection == "up"){
 
-
+  botPaddleY-=5
+  
+}
+  
+  if(botDirection == "down"){
+   
+  botPaddleY+=5  
+    
+    
+  }
+     
+     
+  
+}
+function botDirChange(){
+ if(botPaddleY == 0 ){
+  botDirection = "down" 
+   
+ }
+  if(botPaddleY == height + 50){
+   
+    botDirection = "up"
+    
+  }
+  
+  
+}
               
               
               function draw(){
-   
+   background(0)
+                fill(255)
+                
+                stroke(255)
  square(ballX,ballY,20)
-   
+   rect(botPaddleX,botPaddleY,10,paddleWidth)
+               
+                paddleY = mouseY
+                rect(width-10,paddleY,10,paddleWidth)
    
    
  }
