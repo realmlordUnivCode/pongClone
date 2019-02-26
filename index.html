@@ -13,6 +13,8 @@
 
       
   <script>
+
+var ballDirection = 0    
 var scorePlayer = 0
 var scoreBot = 0
 var scored = false
@@ -22,14 +24,22 @@ var botDirection = 1
 var paddleY
 var botPaddleX = 10
 var botPaddleY = 500
-var  paddleWidth = 50
- function botMove(){
-switch(botDirection){
-    //0 means down
-  case 0:
-    botPaddleY+=5
-    break;
-    //1 means up
+var paddleWidth = 50
+
+
+
+
+function botMove(){
+    
+  switch(botDirection){
+  
+      //0 means down
+              case 0:
+    
+                 botPaddleY+=5
+                    
+              break;
+      //1 means up
   case 1:
     botPaddleY -=5
     
