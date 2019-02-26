@@ -10,20 +10,13 @@
         }
     </style>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
-<script>
-  function thisworks(){
-    
-   alert("this Works") 
-  }
-  
-  
-  </script>
+
       
   <script>
 
-    botPaddleX = 10
-    botPaddleY = 500
-    paddleWidth = 50
+    var botPaddleX = 10
+    var botPaddleY = 500
+   var  paddleWidth = 50
   function ballMove(){
   switch(ballDirection)
     //0 means down and right!
@@ -58,38 +51,36 @@ var scoreBot = 0
 var scored = false
 var ballX = 500
 var ballY = 500
-var botDirection = "up"
+var botDirection = 1
 function botMove(){
-if (botDirection == "up"){
+switch(botDirection){
+    //0 means down
+  case 0:
+    botPaddleY+=5
+    break;
+    //1 means up
+  case 1:
+    botPaddleY -=5
+    
+    
+}
+     
+  
 
-  botPaddleY-=5
-  
-}
-  
-  if(botDirection == "down"){
-   
-  botPaddleY+=5  
-    
-    
-  }
-     
-     
-  
-}
 function botDirChange(){
  if(botPaddleY == 0 ){
-  botDirection = "down" 
+  botDirection = 0 
    
  }
   if(botPaddleY == height + 50){
    
-    botDirection = "up"
+    botDirection = 1
     
   }
   
   
 }
-              
+              var paddleY
               
               function draw(){
    background(0)
