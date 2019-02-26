@@ -13,11 +13,19 @@
 
       
   <script>
+var scorePlayer = 0
+var scoreBot = 0
+var scored = false
+var ballX = 500
+var ballY = 500
+var botDirection = 1
+var paddleY
+var botPaddleX = 10
+var botPaddleY = 500
+var  paddleWidth = 50
+ 
 
-    var botPaddleX = 10
-    var botPaddleY = 500
-   var  paddleWidth = 50
-  function ballMove(){
+function ballMove(){
   switch(ballDirection){
     //0 means down and right!
     case 0:
@@ -39,19 +47,26 @@
     ballX-=10
     ballY-=10
   }
+    function botDirChange(){
+ if(botPaddleY == 0 ){
+  botDirection = 0 
+   
+ }
+  if(botPaddleY == height + 50){
+   
+    botDirection = 1
     
+  }
+  
+  
+}
   }
 function setup(){
  createCanvas(window.innerWidth,window.innerHeight) 
   framerate(15)
   
 }
-    var scorePlayer = 0
-var scoreBot = 0
-var scored = false
-var ballX = 500
-var ballY = 500
-var botDirection = 1
+    
 function botMove(){
 switch(botDirection){
     //0 means down
@@ -67,33 +82,22 @@ switch(botDirection){
      
 }
 
-function botDirChange(){
- if(botPaddleY == 0 ){
-  botDirection = 0 
-   
- }
-  if(botPaddleY == height + 50){
-   
-    botDirection = 1
-    
-  }
-  
-  
-}
-              var paddleY
+
               
-              function draw(){
-   background(0)
+ function draw(){
+ 
+   
+                background(0)
                 fill(255)
-                
                 stroke(255)
- square(ballX,ballY,20)
-   rect(botPaddleX,botPaddleY,10,paddleWidth)
-               
+                rect(ballX,ballY,20,20)
+                rect(botPaddleX,botPaddleY,10,paddleWidth)               
                 paddleY = mouseY
                 rect(width-10,paddleY,10,paddleWidth)
-   
-  ballMove() 
+                ballMove() 
+
+ 
+ 
  }
 
   </script>
