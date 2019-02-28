@@ -32,38 +32,6 @@ var botPaddleX = 10
 var botPaddleY = canvas.height/2
 var paddleWidth = 50
 
-
-
-
-
-
-function setup(){
- createCanvas(window.innerWidth,window.innerHeight) 
-  framerate(15)
-  
-}
-    
-              
- function draw(){
- 
-   
-                background(0)
-                fill(255)
-                stroke(255)
-                rect(ballX,ballY,20,20)
-                rect(botPaddleX,botPaddleY,10,paddleWidth)               
-                paddleY = mouseY
-                rect(canvas.width-10,paddleY,10,paddleWidth)
-                detectors()
-   
- }
-    
-    
-  
-
-    
-
-
 function detectors(){
  alert("here the first line of detectors works!")
   switch(botDirection){
@@ -115,6 +83,38 @@ function detectors(){
   }
   
   }
+
+
+
+
+
+function setup(){
+ createCanvas(window.innerWidth,window.innerHeight) 
+  framerate(15)
+  
+}
+    
+              
+ function draw(){
+ 
+   
+                background(0)
+                fill(255)
+                stroke(255)
+                rect(ballX,ballY,20,20)
+                rect(botPaddleX,botPaddleY,10,paddleWidth)               
+                paddleY = mouseY
+                rect(canvas.width-10,paddleY,10,paddleWidth)
+                detectors()
+   
+ }
+    
+    
+  
+
+    
+
+
 
     
 
