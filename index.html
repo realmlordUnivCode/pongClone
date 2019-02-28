@@ -56,8 +56,15 @@ function setup(){
                 rect(width-10,paddleY,10,paddleWidth)
                 ballMove() 
  }
-    function botMove(){
     
+    
+  
+
+    
+
+
+function detectors(){
+ 
   switch(botDirection){
   
       //0 means down
@@ -71,11 +78,9 @@ function setup(){
     botPaddleY -=5
     
     break;
-}
-     
-}
-
-function ballMove(){
+  }
+  
+  
   switch(ballDirection){
     //0 means down and right!
     case 0:
@@ -98,9 +103,7 @@ function ballMove(){
     ballY-=10
      break;
   }
-}
-    function botDirChange(){
- if(botPaddleY == 0 ){
+      if(botPaddleY == 0 ){
   botDirection = 0 
    
  }
@@ -110,9 +113,9 @@ function ballMove(){
     
   }
   
-  
-
   }
+
+    
 
 
   </script>
