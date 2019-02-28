@@ -30,7 +30,28 @@ var paddleWidth = 50
 
 
 
-function botMove(){
+
+
+function setup(){
+ createCanvas(window.innerWidth,window.innerHeight) 
+  framerate(15)
+  
+}
+    
+              
+ function draw(){
+ 
+   
+                background(0)
+                fill(255)
+                stroke(255)
+                rect(ballX,ballY,20,20)
+                rect(botPaddleX,botPaddleY,10,paddleWidth)               
+                paddleY = mouseY
+                rect(width-10,paddleY,10,paddleWidth)
+                ballMove() 
+ }
+    function botMove(){
     
   switch(botDirection){
   
@@ -88,25 +109,5 @@ function ballMove(){
   }
 
 
-
-function setup(){
- createCanvas(window.innerWidth,window.innerHeight) 
-  framerate(15)
-  
-}
-    
-              
- function draw(){
- 
-   
-                background(0)
-                fill(255)
-                stroke(255)
-                rect(ballX,ballY,20,20)
-                rect(botPaddleX,botPaddleY,10,paddleWidth)               
-                paddleY = mouseY
-                rect(width-10,paddleY,10,paddleWidth)
-                ballMove() 
- }
   </script>
 </body>
