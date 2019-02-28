@@ -24,12 +24,12 @@ var ballDirection = 0
 var scorePlayer = 0
 var scoreBot = 0
 var scored = false
-var ballX = width/2
-var ballY = height/2
+var ballX = canvas.width/2
+var ballY = canvas.height/2
 var botDirection = 1
-var paddleY = height/2
+var paddleY = canvas.height/2
 var botPaddleX = 10
-var botPaddleY = height/2
+var botPaddleY = canvas.height/2
 var paddleWidth = 50
 
 
@@ -53,7 +53,7 @@ function setup(){
                 rect(ballX,ballY,20,20)
                 rect(botPaddleX,botPaddleY,10,paddleWidth)               
                 paddleY = mouseY
-                rect(width-10,paddleY,10,paddleWidth)
+                rect(canvas.width-10,paddleY,10,paddleWidth)
                 detectors()
  }
     
@@ -103,11 +103,11 @@ function detectors(){
     ballY-=10
      break;
   }
-      if(botPaddleY == 0 ){
+      if(botPaddleY == 50 ){
   botDirection = 0 
    
  }
-  if(botPaddleY == height + 50){
+  if(botPaddleY == canvas.height + 50){
    
     botDirection = 1
     
