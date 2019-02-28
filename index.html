@@ -32,7 +32,16 @@ var botPaddleX = 10
 var botPaddleY = canvas.height/2
 var paddleWidth = 50
 
-function detectors(){
+
+
+
+
+function setup(){
+ createCanvas(window.innerWidth,window.innerHeight) 
+  framerate(15)
+  
+}
+    function detectors(){
  alert("here the first line of detectors works!")
   switch(botDirection){
   
@@ -85,14 +94,6 @@ function detectors(){
   }
 
 
-
-
-
-function setup(){
- createCanvas(window.innerWidth,window.innerHeight) 
-  framerate(15)
-  
-}
     
               
  function draw(){
