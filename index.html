@@ -46,45 +46,11 @@ function setup(){
 }
     function detectors(){
  alert("here the first line of detectors works!")
-  switch(botDirection){
-  
-      //0 means down
-              case 0:
-    
-                 botPaddleY+=5
-                    
-              break;
-      //1 means up
-  case 1:
-    botPaddleY -=5
-    
-    break;
-  }
+ 
   // this doesnt work for some reason
       //Fix later!
   
-  switch(ballDirection){
-    //0 means down and right!
-    case 0:
-    ballX += 10
-    ballY += 10
-    break;
-    //1 means down and left
-    case 1:
-    ballX -=10 
-    ballY+=10
-    break;
-    //2 means up and to the right
-    case 2:
-    ballX += 10
-    ballY -= 10
-    break;
-    //3 means up and to the left
-    care 3:
-    ballX-=10
-    ballY-=10
-     break;
-  }
+  
       if(botPaddleY == 50 ){
   botDirection = 0 
    
@@ -110,7 +76,23 @@ function setup(){
                 rect(botPaddleX,botPaddleY,10,paddleWidth)               
                 paddleY = mouseY
                 rect(canvas.width-10,paddleY,10,paddleWidth)
-                detectors()
+    switch(botDirection){
+  
+      //0 means down
+              case 0:
+    
+                 botPaddleY+=5
+                    
+              break;
+      //1 means up
+  case 1:
+    botPaddleY -=5
+    
+    break;
+  }
+   
+   
+   
    
  }
     
