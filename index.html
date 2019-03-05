@@ -55,7 +55,7 @@ function setup(){
   botDirection = 0 
    
  }
-  if(botPaddleY == canvas.height + 50){
+  if(botPaddleY == height + 50){
    
     botDirection = 1
     
@@ -90,7 +90,28 @@ function setup(){
     
     break;
   }
-   
+   switch(ballDirection){
+    //0 means down and right!
+    case 0:
+    ballX += 10
+    ballY += 10
+    break;
+    //1 means down and left
+    case 1:
+    ballX -=10 
+    ballY+=10
+    break;
+    //2 means up and to the right
+    case 2:
+    ballX += 10
+    ballY -= 10
+    break;
+    //3 means up and to the left
+    case 3:
+    ballX-=10
+    ballY-=10
+     break;
+  }
    
    
    
